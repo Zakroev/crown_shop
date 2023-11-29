@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {
   signInWithGooglePopup,
-  createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase.utils";
 
@@ -31,6 +30,7 @@ const SignInForm = () => {
     event.preventDefault();
 
     try {
+      // eslint-disable-next-line
       const { user } = await signInAuthUserWithEmailAndPassword(
         email,
         password
